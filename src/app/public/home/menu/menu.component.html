@@ -1,0 +1,5 @@
+<div class="menu-bar-icon" (click)="toggleMenuComponentClick()"></div>
+<h1 class="menu-showcase">{{showcase}}</h1>
+<ul class="menu-bar-content">
+  <li *ngFor='let menu of menuList' (click)="updateShowcase(menu)">{{menu}}</li>
+</ul>

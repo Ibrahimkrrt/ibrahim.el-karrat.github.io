@@ -1,0 +1,17 @@
+:host {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle,svg {
+    position: absolute;
+    border-radius: 50%;
+}
+
+circle{
+    fill: none;
+    stroke: #FFC107;
+    stroke-width: 5px;
+}

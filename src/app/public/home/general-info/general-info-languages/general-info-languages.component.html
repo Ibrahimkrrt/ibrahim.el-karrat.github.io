@@ -1,0 +1,8 @@
+<hr />
+<h2>Languages</h2>
+<section>
+  <div *ngFor="let culture of cultures">
+    <app-ring-progress-bar [value]="culture.level"></app-ring-progress-bar>
+    <p>{{ culture.language }}</p>
+  </div>
+</section>

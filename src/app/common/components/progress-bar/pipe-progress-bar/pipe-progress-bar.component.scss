@@ -1,0 +1,40 @@
+:host {
+  display: grid;
+  grid-template-areas:
+    "label value"
+    "progress progress";
+
+  gap: 10px;
+}
+
+label {
+  grid-area: label;
+  justify-self: start;
+  font-size: 13px;
+}
+
+span {
+  grid-area: value;
+  justify-self: end;
+}
+
+progress {
+  grid-area: progress;
+  width: 100%;
+  justify-self: stretch;
+  height: 4px;
+  border: none;
+  background-color: #1e1e28;
+}
+progress::-webkit-progress-bar {
+  background-color: #1e1e28;
+}
+progress::-moz-progress-bar {
+  background-color: #ffc107;
+}
+progress::-webkit-progress-value {
+  background-color: #ffc107;
+}
+progress::-moz-progress-value {
+  background-color: #ffc107;
+}

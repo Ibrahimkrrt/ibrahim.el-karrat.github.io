@@ -1,0 +1,41 @@
+:host {
+  padding: 15px 30px;
+  font-size: 13px;
+  display: grid;
+  grid-template-areas:
+    "residence residence-answer"
+    "city city-answer"
+    "age age-answer";
+}
+
+.residence {
+  grid-area: residence;
+}
+.city {
+  grid-area: city;
+}
+.age {
+  grid-area: age;
+}
+.residence,
+.city,
+.age {
+  justify-self: start;
+  color: #fff;
+}
+
+.residence-answer {
+  grid-area: residence-answer;
+}
+.city-answer {
+  grid-area: city-answer;
+}
+.age-answer {
+  grid-area: age-answer;
+}
+.residence-answer,
+.city-answer,
+.age-answer {
+  justify-self: end;
+  color: #8c8c8e;
+}

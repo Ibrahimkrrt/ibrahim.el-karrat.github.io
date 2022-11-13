@@ -1,0 +1,22 @@
+<div #innerCircle class="circle"></div>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  [attr.width]="size"
+  [attr.height]="size"
+>
+  <circle
+    #progressCircle
+    [attr.cx]="size / 2"
+    [attr.cy]="size / 2"
+    [attr.r]="(size - strokeWidth) / 2"
+    [attr.stroke-dasharray]="(size - strokeWidth) * PI"
+    [attr.stroke-dashoffset]="
+      (size - strokeWidth) * PI - ((size - strokeWidth) * PI * value) / 100
+    "
+    stroke-linecap="round"
+  ></circle>
+</svg>
+<span>
+  {{ value / 100 | percent }}
+</span>

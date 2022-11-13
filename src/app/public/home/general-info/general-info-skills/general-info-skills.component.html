@@ -1,0 +1,9 @@
+<hr />
+<h2>Skills</h2>
+<div class="bundler">
+  <app-pipe-progress-bar
+    *ngFor="let skill of skills"
+    [label]="skill.domane"
+    [value]="skill.level"
+  ></app-pipe-progress-bar>
+</div>
