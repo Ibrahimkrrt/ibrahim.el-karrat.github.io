@@ -1,12 +1,38 @@
+@import "../../../assets/styles/variables";
+
 :host {
-  background: #1E1E28;
+  background: #1e1e28;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  display: grid;
 }
 
+aside {
+  grid-area: aside;
+  height: 100%;
+  overflow: scroll;
+}
 main {
-  flex: 1;
+  grid-area: main;
+  height: 100%;
+  overflow-y: scroll;
+}
+nav {
+  grid-area: nav;
+}
+
+@media screen and (min-width: #{$screenS}) {
+  :host {
+    grid-template-areas: "aside main nav";
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: #{$screenS}) {
+  :host {
+    grid-template-areas:
+      "nav"
+      "aside"
+      "main";
+    overflow-y: scroll;
+  }
 }

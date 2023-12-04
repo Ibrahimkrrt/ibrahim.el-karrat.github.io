@@ -4,18 +4,22 @@
   color: white;
   border-radius: 5px;
   // overflow-y: scroll;
-  padding: 10px;
+  padding: 20px;
   height: 100%;
   gap: 10px;
 }
 
-
-
-.placeholder1 {
+.banner {
   width: 100%;
-  min-height: 300px;
-  border: 2px dashed #fff;
-  border-radius: 5px;
+  min-height: 400px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.banner-description {
+  flex: 1;
+  padding: 2rem 3rem;
 }
 
 .placeholder2 {
@@ -36,4 +40,38 @@ section {
     min-width: 250px;
     height: 100px;
   }
+}
+
+.person {
+  flex: 1;
+  margin-block-start: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #242430;
+  border-radius: 2rem;
+}
+
+.person > div {
+  width: 325px;
+  height: 280px;
+}
+
+.person img {
+  justify-self: center;
+  width: 125%;
+  max-width: none;
+  object-fit: cover;
+  transform: translateY(var(--translateY, 9%))
+    translateX(var(--translateX, -15%)) scale(var(--scale, -0.9, 0.9));
+  transition: .5s cubic-bezier(0.89, 0.28, 0.1, 1.78);
+  filter: var(--ds);
+  will-change: transform, filter;
+  rotate: var(--rorate, -20deg);
+}
+
+.person:hover {
+  --scale: -1, 1;
+  --translateY: -5%;
+  --translateX: -76px;
+  --rorate: -30deg;
 }
